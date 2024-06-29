@@ -9,7 +9,7 @@
 #File path to where you store your AD information
 $filePath = "C:/Full_ADUsers_List.csv"
 
-#holds all ADUsers with all there properties if needed
+#holds all ADUsers with all their properties if needed
 $ADUsers = Get-ADUser -Filter * -Properties *
 #loops through each user in AD and creates a custom object to use as an output to the file path above.
 foreach ($user in $ADUsers)
@@ -23,4 +23,6 @@ foreach ($user in $ADUsers)
 
     } | export-csv -Path $filePath -Delimiter "," -NoTypeInformation -Append
 }
+
+Write-Host "Finished generating a list of Users located on your C: Drive as: $filePath"
 
