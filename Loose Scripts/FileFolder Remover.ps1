@@ -9,6 +9,8 @@
 ####################################################
 
 ############-Vars-###########################################################
+#move powershell to the base folder for users
+cd c:/Users
 
 #clear var in case running script more then once
 $pathToAppNeedingRemoved = ""
@@ -21,8 +23,7 @@ $pathToAppNeedingRemoved = (Get-ChildItem -Recurse $fileToRemove).FullName
 
 #############################################################################
 
-#move powershell to the base folder for users
-cd c:/Users
+
 
 #if there is no files found report it.
 if($pathToAppNeedingRemoved -eq $null)
