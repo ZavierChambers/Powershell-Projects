@@ -43,7 +43,7 @@ foreach($folder in $pathToAppNeedingRemoved)
     #status of current removed file/folder
     Write-Host "REMOVED: $folder Complete" -BackgroundColor White -ForegroundColor Blue
     #code to remove the file/folder requested
-    #Remove-Item -Path $pathToAppNeedingRemoved
+    Remove-Item -Path $pathToAppNeedingRemoved
 }
 #status to let user know the program has ended
 Write-Host "The requested folder/file have been removed" -BackgroundColor white -ForegroundColor Black
